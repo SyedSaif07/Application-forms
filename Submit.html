@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{%static 'Userforms/fonts/material-icon/css/material-design-iconic-font.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{%static 'Userforms/css/style.css' %}">
+
+    <title>Application form</title>
+</head>
+<body>
+<div class="main">
+	<div class="container">
+            <div class="signup-content">
+		<div class="signup-img">
+                    <img src="{%static 'Userforms/images/img.jpg' %}" alt="">
+                </div>
+                <div class="signup-form">
+                    <form action="" method="POST" class="register-form" id="register-form">
+			{% csrf_token %}
+			<h2>Student Application form</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Name :</label>
+                                <input type="text" name="name" id="name" required/></n>
+                            </div>
+                            <div class="form-group">
+                                <label for="father_name">Father's Name :</label>
+                                <input type="text" name="father_name" id="father_name" required/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address :</label>
+                            <input type="text" name="address" id="address" required/>
+                        </div>
+                        <div class="form-radio">
+                            <label for="gender" class="radio-label">Gender :</label>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="male" checked>
+                                <label for="male">Male</label>
+                                <span class="check"></span>
+                            </div>
+                            <div class="form-radio-item">
+                                <input type="radio" name="gender" id="female">
+                                <label for="female">Female</label>
+                                <span class="check"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">State :</label>
+                                <div class="form-select">
+                                    <select name="state" id="state">
+                                        <option value=""></option>
+                                        <option value="tn">Tamil Nadu</option>
+                                        <option value="kt">Karnataka</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City :</label>
+                                <div class="form-select">
+                                    <select name="city" id="city">
+                                        <option value=""></option>
+                                        <option value="chennai">Chennai</option>
+                                        <option value="bangalore">Bangalore</option>
+                                    </select>
+                                    <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="birth_date">DOB :</label>
+                            <input type="text" name="birth_date" id="birth_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="pincode">Pincode :</label>
+                            <input type="text" name="pincode" id="pincode">
+                        </div>
+                        <div class="form-group">
+                            <label for="course">Course :</label>
+                            <div class="form-select">
+                                <select name="course" id="course">
+                                    <option value=""></option>
+                                    <option value="Software development">Software development</option>
+                                    <option value="Web design">Web design</option>
+                                    <option value="Automation">Automation</option>
+                                </select>
+                                <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email ID :</label>
+                            <input type="email" name="email" id="email" />
+                        </div>
+                        <div class="form-submit">
+                            <input type="submit" value="Post"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- JS -->
+    <script src="{%static 'Userforms/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{%static 'Userforms/js/main.js' %}"></script>	
+</body>
+</html>
